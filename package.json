@@ -7,7 +7,7 @@
     },
     "private": false,
     "license": "MIT",
-    "main": "dist/index",
+    "main": "node/index",
     "directories": {
         "test": "test"
     },
@@ -33,13 +33,17 @@
         "nyc": "^14.1.1",
         "rimraf": "^2.7.1",
         "source-map-support": "^0.5.13",
+        "ts-loader": "^6.0.4",
         "ts-node": "^8.3.0",
         "typedoc": "^0.15.0",
-        "typescript": "^3.5.3"
+        "typescript": "^3.5.3",
+        "webpack": "^4.39.2",
+        "webpack-cli": "^3.3.7"
     },
     "scripts": {
-        "clean": "rimraf dist",
-        "build": "npm run clean && tsc",
+        "build": "npm run build-node && npm run build-browser",
+        "build-node": "rimraf node && tsc",
+        "build-browser": "rimraf browser && webpack",
         "test": "nyc mocha"
     }
 }
