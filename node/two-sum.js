@@ -14,7 +14,7 @@ function twoSum(a, b) {
     let x = a + b;
     let bv = x - a;
     let y = (a - (x - bv)) + (b - bv);
-    return [x, y];
+    return [y, x];
 }
 exports.twoSum = twoSum;
 //# sourceMappingURL=two-sum.js.map

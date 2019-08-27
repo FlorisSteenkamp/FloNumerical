@@ -24,7 +24,7 @@ function growExpansion(e, b) {
     let h = new Array(m + 1);
     for (let i = 0; i < m; i++) {
         // Note the use of twoSum and not fastTwoSum.
-        [q, h[i]] = two_sum_1.twoSum(q, e[i]);
+        [h[i], q] = two_sum_1.twoSum(q, e[i]);
     }
     h[m] = q;
     return compress_1.compress(h);

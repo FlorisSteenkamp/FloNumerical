@@ -74,10 +74,10 @@ function orient2dAdapt(A, B, C, detsum) {
         // Anti-clockwise or clockwise
         return det;
     }
-    let acxtail = two_diff_1.twoDiff(A[0], C[0])[1];
-    let bcxtail = two_diff_1.twoDiff(B[0], C[0])[1];
-    let acytail = two_diff_1.twoDiff(A[1], C[1])[1];
-    let bcytail = two_diff_1.twoDiff(B[1], C[1])[1];
+    let acxtail = two_diff_1.twoDiff(A[0], C[0])[0];
+    let bcxtail = two_diff_1.twoDiff(B[0], C[0])[0];
+    let acytail = two_diff_1.twoDiff(A[1], C[1])[0];
+    let bcytail = two_diff_1.twoDiff(B[1], C[1])[0];
     if (acxtail === 0 && acytail === 0 &&
         bcxtail === 0 && bcytail === 0) {
         // Straight

@@ -10,7 +10,7 @@ function twoDiff(a, b) {
     let x = a - b;
     let bvirt = a - x;
     let y = (a - (x + bvirt)) + (bvirt - b);
-    return [x, y];
+    return [y, x];
 }
 exports.twoDiff = twoDiff;
 //# sourceMappingURL=two-diff.js.map

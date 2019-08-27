@@ -27,9 +27,9 @@ function fastExpansionSum(e, f) {
     let len = g.length;
     let h = new Array(len);
     let q;
-    [q, h[0]] = fast_two_sum_1.fastTwoSum(g[1], g[0]);
+    [h[0], q] = fast_two_sum_1.fastTwoSum(g[1], g[0]);
     for (let i = 2; i < len; i++) {
-        [q, h[i - 1]] = two_sum_1.twoSum(q, g[i]);
+        [h[i - 1], q] = two_sum_1.twoSum(q, g[i]);
     }
     h[len - 1] = q;
     return compress_1.compress(h);

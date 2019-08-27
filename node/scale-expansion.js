@@ -28,8 +28,8 @@ function scaleExpansion(e, b) {
     [h[0], q] = two_product_1.twoProduct(e[0], b);
     for (let i = 1; i < m; i++) {
         let [t, T] = two_product_1.twoProduct(e[i], b);
-        [q_, h[2 * i - 1]] = two_sum_1.twoSum(q, t);
-        [q, h[2 * i]] = fast_two_sum_1.fastTwoSum(T, q_);
+        [h[2 * i - 1], q_] = two_sum_1.twoSum(q, t);
+        [h[2 * i], q] = fast_two_sum_1.fastTwoSum(T, q_);
     }
     h[2 * m - 1] = q;
     return compress_1.compress(h);
