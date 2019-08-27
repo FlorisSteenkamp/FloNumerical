@@ -1,5 +1,6 @@
 
 import { compress } from './compress';
+import { compare } from './compare';
 import { estimate } from './estimate';
 import { expansionDiff } from './expansion-diff';
 import { fastExpansionSum } from './fast-expansion-sum';
@@ -58,6 +59,7 @@ export {
 	reduceSignificand,
     expansionProduct,
     sign, exponent, significand,
+    compare,
     
     // high-level
     calculate,
@@ -75,3 +77,4 @@ export {
     getHighestSetBit, getLowestSetBit,
     isValid
 }
+
