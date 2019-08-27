@@ -2,7 +2,7 @@
 /**
  * Returns the sum and exact error of adding two floating point numbers. 
  * Uses an EFT (error-free transformation), i.e. a+b === x+y exactly.
- * The returned sum is a non-overlapping expansion.
+ * The returned sum is a non-overlapping expansion (smallest value first!).
  * 
  * Precondition: abs(a) >= abs(b) - A fast test that can be used is 
  * (a > b) === (a > -b)
@@ -13,7 +13,7 @@ function fastTwoSum(a: number, b: number) {
     let x = a + b;
     let y = b - (x - a);
 
-    return [x, y];
+    return [y, x];
 }
 
 

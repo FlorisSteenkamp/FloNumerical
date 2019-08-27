@@ -26,7 +26,7 @@ function growExpansion(e: number[], b: number): number[] {
     let h: number[] = new Array(m+1);
     for (let i=0; i<m; i++) {
         // Note the use of twoSum and not fastTwoSum.
-        [q, h[i]] = twoSum(q, e[i]);
+        [h[i], q] = twoSum(q, e[i]);
     }
     h[m] = q;
 

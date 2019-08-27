@@ -31,8 +31,8 @@ function scaleExpansion(e: number[], b: number): number[] {
     [h[0], q] = twoProduct(e[0], b);
     for (let i=1; i<m; i++) {
         let [t, T] = twoProduct(e[i], b);
-        [q_, h[2*i-1]] = twoSum(q, t);
-        [q,  h[2*i  ]] = fastTwoSum(T, q_);
+        [h[2*i-1], q_] = twoSum(q, t);
+        [h[2*i  ], q] = fastTwoSum(T, q_);
     }
 
     h[2*m - 1] = q;

@@ -14,7 +14,7 @@ function twoSum(a: number, b: number) {
     let bv = x - a;
     let y = (a - (x-bv)) + (b-bv);
 
-    return [x,y];
+    return [y, x];
 }
 
 
