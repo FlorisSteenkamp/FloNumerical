@@ -1,6 +1,7 @@
 
 import { compress } from './compress';
 import { compare } from './compare';
+import { abs } from './abs';
 import { estimate } from './estimate';
 import { expansionDiff } from './expansion-diff';
 import { fastExpansionSum } from './fast-expansion-sum';
@@ -60,6 +61,7 @@ export {
     expansionProduct,
     sign, exponent, significand,
     compare,
+    abs,
     
     // high-level
     calculate,
