@@ -10,7 +10,7 @@ function twoDiff(a: number, b: number) {
     let bvirt = a - x;
     let y = (a - (x + bvirt)) + (bvirt - b);
 
-    return [x, y];
+    return [y, x];
 }
 
 

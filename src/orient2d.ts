@@ -85,10 +85,10 @@ function orient2dAdapt(A: number[], B: number[], C: number[], detsum: number) {
         return det;
     }
 
-    let acxtail = twoDiff(A[0], C[0])[1];
-    let bcxtail = twoDiff(B[0], C[0])[1];
-    let acytail = twoDiff(A[1], C[1])[1];
-    let bcytail = twoDiff(B[1], C[1])[1];
+    let acxtail = twoDiff(A[0], C[0])[0];
+    let bcxtail = twoDiff(B[0], C[0])[0];
+    let acytail = twoDiff(A[1], C[1])[0];
+    let bcytail = twoDiff(B[1], C[1])[0];
 
     if (acxtail === 0 && acytail === 0 && 
         bcxtail === 0 && bcytail === 0) {
