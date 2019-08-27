@@ -1,4 +1,5 @@
 import { compress } from './compress';
+import { compare } from './compare';
 import { estimate } from './estimate';
 import { expansionDiff } from './expansion-diff';
 import { fastExpansionSum } from './fast-expansion-sum';
@@ -33,4 +34,4 @@ import { doubleToOctets } from './representation/double-to-octets';
 import { octetsToDouble } from './representation/octets-to-double';
 import { getHighestSetBit, getLowestSetBit } from './representation/get-max-set-bit';
 import { isValid } from './representation/is-valid';
-export { compress, estimate, expansionDiff, fastExpansionSum, fastTwoDiff, fastTwoSum, growExpansion, isAdjacent, isOverlapping, isNonOverlapping, isNonOverlappingAll, merge, negativeOf, orient2d, scaleExpansion, split, twoDiff, twoProduct, twoSum, reduceSignificand, expansionProduct, sign, exponent, significand, calculate, calculateSum, parseDouble, parseDoubleDetailed, isBitAligned, msbExponent, lsbExponent, bitLength, binaryStringToDouble, doubleToBinaryString, doubleToOctets, octetsToDouble, getHighestSetBit, getLowestSetBit, isValid };
+export { compress, estimate, expansionDiff, fastExpansionSum, fastTwoDiff, fastTwoSum, growExpansion, isAdjacent, isOverlapping, isNonOverlapping, isNonOverlappingAll, merge, negativeOf, orient2d, scaleExpansion, split, twoDiff, twoProduct, twoSum, reduceSignificand, expansionProduct, sign, exponent, significand, compare, calculate, calculateSum, parseDouble, parseDoubleDetailed, isBitAligned, msbExponent, lsbExponent, bitLength, binaryStringToDouble, doubleToBinaryString, doubleToOctets, octetsToDouble, getHighestSetBit, getLowestSetBit, isValid };

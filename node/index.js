@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const compress_1 = require("./compress");
 exports.compress = compress_1.compress;
+const compare_1 = require("./compare");
+exports.compare = compare_1.compare;
 const estimate_1 = require("./estimate");
 exports.estimate = estimate_1.estimate;
 const expansion_diff_1 = require("./expansion-diff");
