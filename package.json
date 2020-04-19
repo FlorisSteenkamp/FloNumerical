@@ -1,6 +1,6 @@
 {
     "name": "flo-numerical",
-    "description": "An infinite precision floating point library.",
+    "description": "An infinite precision floating point library (limited to underflow / overflow).",
     "version": "0.0.9",
     "author": {
         "name": "Floris Steenkamp"
@@ -37,13 +37,14 @@
         "ts-node": "^8.3.0",
         "typedoc": "^0.15.0",
         "typescript": "^3.5.3",
-        "webpack": "^4.39.2",
+        "webpack": "^4.39.3",
         "webpack-cli": "^3.3.7"
     },
     "scripts": {
-        "build": "npm run build-node && npm run build-browser",
+        "build": "npm run build-browser && npm run build-node",
         "build-node": "rimraf node && tsc",
         "build-browser": "rimraf browser && webpack",
-        "test": "nyc mocha"
+        "test": "nyc mocha",
+        "a": "mocha --require ts-node/register --require source-map-support/register ./test/double-float/expansion-div.spec.ts"
     }
 }

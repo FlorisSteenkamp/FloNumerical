@@ -1,1 +1,0 @@
-{"version":3,"file":"bit-length.js","sourceRoot":"","sources":["../../src/representation/bit-length.ts"],"names":[],"mappings":";;AACA,uDAAsE;AAGtE;;;;GAIG;AACH,SAAS,SAAS,CAAC,CAAS;IACxB,IAAI,CAAC,KAAK,CAAC,EAAE;QAAE,OAAO,CAAC,CAAC;KAAE;IAE1B,OAAO,kCAAgB,CAAC,CAAC,CAAC,GAAG,iCAAe,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC;AACxD,CAAC;AAGQ,8BAAS"}
