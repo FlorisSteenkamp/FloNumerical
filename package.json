@@ -1,7 +1,7 @@
 {
     "name": "flo-numerical",
     "description": "A double-double and infinite precision floating point library (up to underflow / overflow).",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "author": {
         "name": "Floris Steenkamp"
     },
