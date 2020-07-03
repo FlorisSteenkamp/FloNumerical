@@ -1,8 +1,8 @@
 
 import { merge } from "./merge";
-import { fastTwoSum } from "./fast-two-sum";
-import { twoSum } from "./two-sum";
-import { compress } from "./compress";
+import { fastTwoSum } from "../basic/fast-two-sum";
+import { twoSum } from "../basic/two-sum";
+import { eCompress } from "./e-compress";
 
 
 /**
@@ -33,7 +33,7 @@ function fastExpansionSum(e: number[], f: number[]) {
     }
     h[len-1] = q;
 
-    return compress(h);
+    return eCompress(h);
 }
 
 

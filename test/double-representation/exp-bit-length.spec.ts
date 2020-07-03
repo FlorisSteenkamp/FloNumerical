@@ -2,8 +2,7 @@
 import { assert, expect } from 'chai';
 import { describe } from 'mocha';
 
-import { expBitLength } from '../../src/double-representation/bit-length';
-import { toBitlength, getLowestSetBit, exponent } from '../../src';
+import { expBitLength, eToBitlength, getLowestSetBit, exponent } from '../../src/index';
 
 
 describe('expansion bit length', function() {
@@ -21,9 +20,9 @@ describe('expansion bit length', function() {
 
         a = [0.1, 1801439850948198.5];
         expect(expBitLength(a)).to.eql(106);
-        //console.log(toBitlength(a,105));
-        //console.log(toBitlength(a,106));
-        //console.log(toBitlength(a,107));
+        //console.log(eToBitlength(a,105));
+        //console.log(eToBitlength(a,106));
+        //console.log(eToBitlength(a,107));
 
         a = [0.1, 2**3 * 1801439850948198.5];
         expect(expBitLength(a)).to.eql(109);
@@ -40,8 +39,8 @@ describe('expansion bit length', function() {
         a = [15];
         expect(expBitLength(a)).to.eql(4);
 
-        //console.log(toBitlength(a,3)); // => 16
-        //console.log(toBitlength(a,4)); // => 15
-        //console.log(toBitlength(a,5)); // => 15
+        //console.log(eToBitlength(a,3)); // => 16
+        //console.log(eToBitlength(a,4)); // => 15
+        //console.log(eToBitlength(a,5)); // => 15
     });
 });

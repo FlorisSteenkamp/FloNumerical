@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isAdjacent = void 0;
 const is_overlapping_1 = require("./is-overlapping");
 /**
  * Returns true if x and y is adjacent, false otherwise.
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param x A double floating point number
- * @param y Another double floating point number
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
+ * for details
+ * @param x a double floating point number
+ * @param y another double floating point number
  */
 function isAdjacent(x, y) {
     return is_overlapping_1.isOverlapping(x, y) ||

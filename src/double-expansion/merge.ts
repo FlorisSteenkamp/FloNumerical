@@ -3,9 +3,11 @@
  * Returns the result of merging an expansion e and f into a single expansion, 
  * in order of nondecreasing magnitude (possibly with interspersed zeros). 
  * (This function is zero-eliminating)
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e A floating point expansion
- * @param f Another floating point expansion
+ * 
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
+ * 
+ * @param e a floating point expansion
+ * @param f another floating point expansion
  */
 function merge(e: number[], f: number[]) {
     let lenE = e.length;
@@ -39,7 +41,9 @@ function merge(e: number[], f: number[]) {
         j++;
     }
 
-    if (merged.length === 0) { return [0]; }
+    if (merged.length === 0) { 
+        return [0]; 
+    }
 
     return merged;
 }

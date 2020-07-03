@@ -1,6 +1,6 @@
 
-import { twoSum } from "./two-sum";
-import { compress } from "./compress";
+import { twoSum } from "../basic/two-sum";
+import { eCompress } from "./e-compress";
 
 
 /**
@@ -30,7 +30,7 @@ function growExpansion(e: number[], b: number): number[] {
     }
     h[m] = q;
 
-    return compress(h);
+    return eCompress(h);
 }
 
 

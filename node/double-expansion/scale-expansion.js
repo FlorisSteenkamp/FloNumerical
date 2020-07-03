@@ -1,11 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const two_product_1 = require("./two-product");
-const two_sum_1 = require("./two-sum");
-const fast_two_sum_1 = require("./fast-two-sum");
-const compress_1 = require("./compress");
+exports.scaleExpansion2 = exports.scaleExpansion = void 0;
+const two_product_1 = require("../basic/two-product");
+const two_sum_1 = require("../basic/two-sum");
+const fast_two_sum_1 = require("../basic/fast-two-sum");
+const e_compress_1 = require("./e-compress");
 /**
  * Returns the result of multiplying an expansion by a double.
+ *
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
  *
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that
@@ -16,9 +19,8 @@ const compress_1 = require("./compress");
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even
  * tiebreaking is used, then h is non-adjacent.
  *
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e
- * @param b
+ * @param e a double floating point expansion
+ * @param b a double
  */
 function scaleExpansion(e, b) {
     let m = e.length;
@@ -32,11 +34,13 @@ function scaleExpansion(e, b) {
         [h[2 * i], q] = fast_two_sum_1.fastTwoSum(T, q_);
     }
     h[2 * m - 1] = q;
-    return compress_1.compress(h);
+    return e_compress_1.eCompress(h);
 }
 exports.scaleExpansion = scaleExpansion;
 /**
  * Returns the result of multiplying an expansion by a double.
+ *
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
  *
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that
@@ -47,9 +51,8 @@ exports.scaleExpansion = scaleExpansion;
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even
  * tiebreaking is used, then h is non-adjacent.
  *
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e
- * @param b
+ * @param b a double
+ * @param e a double floating point expansion
  */
 function scaleExpansion2(b, e) {
     let m = e.length;
@@ -63,7 +66,7 @@ function scaleExpansion2(b, e) {
         [h[2 * i], q] = fast_two_sum_1.fastTwoSum(T, q_);
     }
     h[2 * m - 1] = q;
-    return compress_1.compress(h);
+    return e_compress_1.eCompress(h);
 }
 exports.scaleExpansion2 = scaleExpansion2;
 //# sourceMappingURL=scale-expansion.js.map

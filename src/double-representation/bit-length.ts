@@ -1,8 +1,8 @@
 
 import { getLowestSetBit, getHighestSetBit } from "./get-max-set-bit";
-import { compress } from "../double-expansion/compress";
+import { eCompress } from "../double-expansion/e-compress";
 import { exponent } from "./exponent";
-import { sign } from "../double-expansion/sign";
+import { eSign } from "../double-expansion/e-sign";
 
 
 /**
@@ -24,8 +24,8 @@ function bitLength(a: number) {
  * @param a A double precision floating point expansion
  */
 function expBitLength(a: number[]) {
-    let a_ = compress(a);
-    if (sign(a_) === 0) { return 0; }
+    let a_ = eCompress(a);
+    if (eSign(a_) === 0) { return 0; }
 
     let msbyte = a_[a_.length-1];
     let lsbyte = a_[0];

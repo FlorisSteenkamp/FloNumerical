@@ -1,11 +1,12 @@
 
-import { twoSum } from "./two-sum";
-import { compress } from "./compress";
+import { twoSum } from "../basic/two-sum";
+import { eCompress } from "./e-compress";
 
 
 /**
  * Returns the result of adding two expansions. 
- * * **fastExpansionSum is nearly always preferred above this function.**
+ * * use `fastExpansionSum` instead, `fastExpansionSum` is nearly always 
+ * preferred above this function.
  * 
  * Theorem 12: Let e = sum_(i=1)^m(e_i) and f = sum_(i=1)^n(f_i) be
  * nonoverlapping expansions of m and n-bit components respectively, where
@@ -35,7 +36,7 @@ function expansionSum(e: number[], f: number[]) {
         e = h;
     }
 
-    return compress(e);
+    return eCompress(e);
 }
 
 

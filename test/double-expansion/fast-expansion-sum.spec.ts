@@ -2,9 +2,9 @@
 import { expect, assert } from 'chai';
 import { describe } from 'mocha';
 
-import { fastExpansionSum } from '../../src/double-expansion/fast-expansion-sum';
+import { fastExpansionSum } from '../../src/index';
 import { isNonOverlappingAll } from '../../src/double-expansion/is-overlapping';
-import { isValid } from '../../src/double-representation/is-valid';
+import { isValid } from '../helpers/is-valid';
 
 
 function check(e: number[], f: number[], res: number[]) {
@@ -29,7 +29,7 @@ function check(e: number[], f: number[], res: number[]) {
 
 
 describe('fast expansion sum', function() {
-	it('should calculate some expansion sums correctly',
+	it('should eCalculate some expansion sums correctly',
 	function() {
         check(
             [-2.7755575615628914e-17, 0.30000000000000004],  // 0.3

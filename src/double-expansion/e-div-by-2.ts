@@ -1,9 +1,12 @@
 
 
 /**
- * Divide a floating point expansion by 2.
+ * Returns the result of dividing a floating point expansion by 2.
  * * **error free**
- * @param e
+ * 
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
+ * 
+ * @param e a floating point expansion
  */
 function eDivBy2(e: number[]) {
     let e_: number[] = [];

@@ -3,6 +3,7 @@
 // under the MIT license
 // Copyright 2013 Bartek Szopka (original author)
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.doubleToBinaryString = void 0;
 const double_to_octets_1 = require("./double-to-octets");
 function doubleToBinaryString(number) {
     return octetsToBinaryString(double_to_octets_1.doubleToOctets(number));

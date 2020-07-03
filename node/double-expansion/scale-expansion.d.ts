@@ -1,6 +1,8 @@
 /**
  * Returns the result of multiplying an expansion by a double.
  *
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
+ *
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that
  * the components of e are sorted in order of increasing magnitude, except that
@@ -10,14 +12,15 @@
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even
  * tiebreaking is used, then h is non-adjacent.
  *
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e
- * @param b
+ * @param e a double floating point expansion
+ * @param b a double
  */
 declare function scaleExpansion(e: number[], b: number): number[];
 /**
  * Returns the result of multiplying an expansion by a double.
  *
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
+ *
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that
  * the components of e are sorted in order of increasing magnitude, except that
@@ -27,9 +30,8 @@ declare function scaleExpansion(e: number[], b: number): number[];
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even
  * tiebreaking is used, then h is non-adjacent.
  *
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e
- * @param b
+ * @param b a double
+ * @param e a double floating point expansion
  */
 declare function scaleExpansion2(b: number, e: number[]): number[];
 export { scaleExpansion, scaleExpansion2 };

@@ -1,9 +1,11 @@
 
 
 /**
- * Multiply a floating point expansion by 2.
+ * Returns the result of multiplying a floating point expansion by 2.
  * * **error free**
- * @param param0 
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf) 
+ * 
+ * @param e
  */
 function eMultBy2(e: number[]) {
     let e_: number[] = [];

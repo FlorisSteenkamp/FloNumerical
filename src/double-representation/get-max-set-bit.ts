@@ -65,7 +65,7 @@ function getHighestSetBit_(a: number) {
  * === 0 or +/-inf or NaN) returns NaN.
  * See https://stackoverflow.com/a/35190288/2010061
  */
-function getHighestSetBit(a: number) {
+function getHighestSetBit(a: number): number {
     if (a === 0 || !Number.isFinite(a)) { 
         // There is no lowest set bit
         return NaN; 

@@ -2,9 +2,9 @@
 import { expect, assert } from 'chai';
 import { describe } from 'mocha';
 
-import { growExpansion } from '../../src/double-expansion/grow-expansion';
+import { growExpansion } from '../../src/index';
 import { isNonOverlappingAll } from '../../src/double-expansion/is-overlapping';
-import { isValid } from '../../src/double-representation/is-valid';
+import { isValid } from '../helpers/is-valid';
 
 
 describe('grow expansion (i.e. a[] + b)', function() {

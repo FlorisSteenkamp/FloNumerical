@@ -2,9 +2,9 @@
 import { expect, assert } from 'chai';
 import { describe } from 'mocha';
 
-import { expansionProduct } from '../../src/double-expansion/expansion-product';
+import { eMult } from '../../src/index';
 import { isNonOverlappingAll } from '../../src/double-expansion/is-overlapping';
-import { isValid } from '../../src/double-representation/is-valid';
+import { isValid } from '../helpers/is-valid';
 
 
 function check(e: number[], f: number[], expected: number[]) {
@@ -19,7 +19,7 @@ function check(e: number[], f: number[], expected: number[]) {
     );
 
 
-    let result = expansionProduct(e,f);
+    let result = eMult(e,f);
 
     assert(
         isValid(result),
@@ -31,7 +31,7 @@ function check(e: number[], f: number[], expected: number[]) {
 
 
 describe('expansion product', function() {
-	it('should calculate some expansion products correctly',
+	it('should eCalculate some expansion products correctly',
 	function() {
         check(
             [-2.7755575615628914e-17, 0.30000000000000004],  // 0.3

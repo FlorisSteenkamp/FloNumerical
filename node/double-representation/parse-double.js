@@ -3,6 +3,7 @@
 // under the MIT license
 // Copyright 2013 Bartek Szopka (original author)
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseDoubleDetailed = exports.parseDouble = void 0;
 const double_to_binary_string_1 = require("./double-to-binary-string");
 const double_to_octets_1 = require("./double-to-octets");
 /**

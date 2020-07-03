@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isBitAligned = void 0;
 const get_max_set_bit_1 = require("./get-max-set-bit");
 const exponent_1 = require("./exponent");
 /**

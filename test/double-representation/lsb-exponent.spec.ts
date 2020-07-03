@@ -2,7 +2,7 @@
 import { assert, expect } from 'chai';
 import { describe } from 'mocha';
 
-import { lsbExponent } from '../../src/double-representation/lsb-exponent';
+import { lsbExponent } from '../../src/index';
 
 
 describe('lsb exponent', function() {

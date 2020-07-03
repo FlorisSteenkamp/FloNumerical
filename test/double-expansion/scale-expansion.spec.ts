@@ -2,9 +2,9 @@
 import { expect, assert } from 'chai';
 import { describe } from 'mocha';
 
-import { scaleExpansion } from '../../src/double-expansion/scale-expansion';
+import { scaleExpansion, scaleExpansion2 } from '../../src/index';
 import { isNonOverlappingAll } from '../../src/double-expansion/is-overlapping';
-import { isValid } from '../../src/double-representation/is-valid';
+import { isValid } from '../helpers/is-valid';
 
 
 describe('scaleExpansion (i.e. a[] * b)', function() {
@@ -19,6 +19,7 @@ describe('scaleExpansion (i.e. a[] * b)', function() {
 		);
 
 		let r = scaleExpansion(e,b);
+		let s = scaleExpansion2(b,e);
 
 		assert(
 			isValid(r),
@@ -29,5 +30,7 @@ describe('scaleExpansion (i.e. a[] * b)', function() {
 			1.204e-18,
 			0.8
 		]);
+
+		expect(r).to.eql(s);
 	});
 });

@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.fastExpansionSum = void 0;
 const merge_1 = require("./merge");
-const fast_two_sum_1 = require("./fast-two-sum");
-const two_sum_1 = require("./two-sum");
-const compress_1 = require("./compress");
+const fast_two_sum_1 = require("../basic/fast-two-sum");
+const two_sum_1 = require("../basic/two-sum");
+const e_compress_1 = require("./e-compress");
 /**
  * Returns the result of adding two expansions.
  *
@@ -31,7 +32,7 @@ function fastExpansionSum(e, f) {
         [h[i - 1], q] = two_sum_1.twoSum(q, g[i]);
     }
     h[len - 1] = q;
-    return compress_1.compress(h);
+    return e_compress_1.eCompress(h);
 }
 exports.fastExpansionSum = fastExpansionSum;
 //# sourceMappingURL=fast-expansion-sum.js.map

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.eMultByNeg2 = void 0;
 /**
  * Multiply a floating point expansion by -2.
  * * **error free**

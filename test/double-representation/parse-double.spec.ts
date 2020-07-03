@@ -1,5 +1,5 @@
 
-import { parseDouble, parseDoubleDetailed } from '../../src/double-representation/parse-double';
+import { parseDouble, parseDoubleDetailed } from '../../src/index';
 import { expect } from 'chai';
 import { describe } from 'mocha';
 

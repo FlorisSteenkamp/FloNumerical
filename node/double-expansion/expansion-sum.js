@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const two_sum_1 = require("./two-sum");
-const compress_1 = require("./compress");
+exports.expansionSum = void 0;
+const two_sum_1 = require("../basic/two-sum");
+const e_compress_1 = require("./e-compress");
 /**
  * Returns the result of adding two expansions.
- * * **fastExpansionSum is nearly always preferred above this function.**
+ * * use `fastExpansionSum` instead, `fastExpansionSum` is nearly always
+ * preferred above this function.
  *
  * Theorem 12: Let e = sum_(i=1)^m(e_i) and f = sum_(i=1)^n(f_i) be
  * nonoverlapping expansions of m and n-bit components respectively, where
@@ -31,7 +33,7 @@ function expansionSum(e, f) {
         h[m] = q;
         e = h;
     }
-    return compress_1.compress(e);
+    return e_compress_1.eCompress(e);
 }
 exports.expansionSum = expansionSum;
 //# sourceMappingURL=expansion-sum.js.map

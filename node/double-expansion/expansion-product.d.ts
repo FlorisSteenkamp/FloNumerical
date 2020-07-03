@@ -1,7 +1,7 @@
 /**
- * Returns the product of two expansions.
+ * Returns the product of two double floating point expansions.
  *
- * See Shewchuk https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
  *
  * As per Shewchuk in the above paper: "To find the product of two expansions
  * e and f, use SCALE-EXPANSION (with zero elimination) to form the expansions
@@ -12,8 +12,8 @@
  *
  * Implemented naively and not as described by Shewchuk (i.e. the algorithm
  * takes O(k^2) operations).
- * @param e An expansion
- * @param f Another expansion
+ * @param e a double floating point expansion
+ * @param f another double floating point expansion
  */
 declare function expansionProduct(e: number[], f: number[]): number[];
 export { expansionProduct };

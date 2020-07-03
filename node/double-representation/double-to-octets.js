@@ -3,6 +3,7 @@
 // under the MIT license
 // Copyright 2013 Bartek Szopka (original author)
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.doubleToOctets = void 0;
 /**
  * Returns the ieee-574 8 bytes composing the given double, starting from the
  * sign bit and ending in the lsb of the significand.

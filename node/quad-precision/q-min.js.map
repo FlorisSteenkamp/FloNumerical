@@ -1,1 +1,0 @@
-{"version":3,"file":"q-min.js","sourceRoot":"","sources":["../../src/quad-precision/q-min.ts"],"names":[],"mappings":";;AACA,+CAA0C;AAG1C;;;;GAIG;AACH,SAAS,IAAI,CAAC,CAAW,EAAE,CAAW;IAClC,IAAI,GAAG,GAAG,uBAAS,CAAC,CAAC,EAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IAE5B,OAAO,GAAG,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC;AAGQ,oBAAI"}

@@ -1,12 +1,14 @@
 
-import { twoProduct } from './two-product';
-import { twoSum } from './two-sum';
-import { fastTwoSum } from './fast-two-sum';
-import { compress } from './compress';
+import { twoProduct } from '../basic/two-product';
+import { twoSum } from '../basic/two-sum';
+import { fastTwoSum } from '../basic/fast-two-sum';
+import { eCompress } from './e-compress';
 
 
 /**
  * Returns the result of multiplying an expansion by a double.
+ * 
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
  * 
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion 
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that 
@@ -16,10 +18,9 @@ import { compress } from './compress';
  * components of h are also in order of increasing magnitude, except that any of 
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even 
  * tiebreaking is used, then h is non-adjacent.
- * 
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e 
- * @param b 
+ *
+ * @param e a double floating point expansion
+ * @param b a double
  */
 function scaleExpansion(e: number[], b: number): number[] {
     let m = e.length;
@@ -37,12 +38,14 @@ function scaleExpansion(e: number[], b: number): number[] {
 
     h[2*m - 1] = q;
 
-    return compress(h);
+    return eCompress(h);
 }
 
 
 /**
  * Returns the result of multiplying an expansion by a double.
+ * 
+ * * see [Shewchuk](https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf)
  * 
  * Theorem 19 (Shwechuk): Let e = sum_(i=1)^m(e_i) be a nonoverlapping expansion 
  * of m p-bit components, and let b be a p-bit value where p >= 4. Suppose that 
@@ -52,10 +55,9 @@ function scaleExpansion(e: number[], b: number): number[] {
  * components of h are also in order of increasing magnitude, except that any of 
  * the h_i may be zero. Furthermore, if e is nonadjacent and round-to-even 
  * tiebreaking is used, then h is non-adjacent.
- * 
- * See https://people.eecs.berkeley.edu/~jrs/papers/robustr.pdf
- * @param e 
- * @param b 
+ *
+ * @param b a double
+ * @param e a double floating point expansion
  */
 function scaleExpansion2(b: number, e: number[]): number[] {
     let m = e.length;
@@ -73,7 +75,7 @@ function scaleExpansion2(b: number, e: number[]): number[] {
 
     h[2*m - 1] = q;
 
-    return compress(h);
+    return eCompress(h);
 }
 
 

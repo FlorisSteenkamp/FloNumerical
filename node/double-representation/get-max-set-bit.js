@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getHighestSetBit = exports.getLowestSetBit = void 0;
 const significand_1 = require("./significand");
 /**
  * Returns the lowest set bit of the given value in [1, (2**31)-1],

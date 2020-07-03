@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const two_sum_1 = require("./two-sum");
-const compress_1 = require("./compress");
+exports.growExpansion = void 0;
+const two_sum_1 = require("../basic/two-sum");
+const e_compress_1 = require("./e-compress");
 /**
  * Returns the result of adding a double to an expansion.
  *
@@ -27,7 +28,7 @@ function growExpansion(e, b) {
         [h[i], q] = two_sum_1.twoSum(q, e[i]);
     }
     h[m] = q;
-    return compress_1.compress(h);
+    return e_compress_1.eCompress(h);
 }
 exports.growExpansion = growExpansion;
 //# sourceMappingURL=grow-expansion.js.map

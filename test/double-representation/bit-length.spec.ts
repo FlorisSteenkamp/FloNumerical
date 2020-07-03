@@ -2,7 +2,7 @@
 import { assert, expect } from 'chai';
 import { describe } from 'mocha';
 
-import { bitLength } from '../../src/double-representation/bit-length';
+import { bitLength } from '../../src/index';
 
 
 describe('bit length', function() {
